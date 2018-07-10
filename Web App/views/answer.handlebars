@@ -1,0 +1,31 @@
+<main class="main">
+        <div class="question">{{Question}}</div>
+        <div class="answer no">
+            <i class="far fa-thumbs-down"></i>
+            <span>Sai/Không/Trái</span>
+        </div>
+        <div class="answer yes">
+            <i class="far fa-thumbs-up"></i>
+            <span>Đúng/Có/Phải</span>
+        </div>
+        <div class="footer">
+            <span class="other result">Kết quả vote</span>
+            <span class="other next">Câu hỏi khác</span>
+        </div>
+</main>
+<script>
+    var next = document.getElementsByClassName("next");
+    var yesAnswer = document.getElementsByClassName("yes");
+    var noAnswer = document.getElementsByClassName("no");
+
+    
+    next[0].addEventListener('click', function(evt){
+        document.location = '/';
+    });
+    yesAnswer[0].addEventListener('click', function(evt){
+        document.location = '/';
+    });
+    noAnswer[0].addEventListener('click', function(evt){
+        document.location = '/';
+    });
+</script>

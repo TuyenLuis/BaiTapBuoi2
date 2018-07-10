@@ -1,0 +1,125 @@
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    height: 50px;
+    font-size: 16px;
+    background-color: #222;
+    
+}
+a{
+    text-decoration: none;
+    color: rgba(255,255,255, 0.5);
+}
+.header>div{
+	float: left;
+    line-height: 50px;
+    width: 100px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.header>div:first-child{
+	font-size: 20px;
+}
+
+.header>div:hover{
+	color: #fff;
+}
+
+
+.main-answer, .main-question{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.question {
+	text-align: center;
+    margin: 70px;
+    font-size: 25px;
+}
+.answer {
+	width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    margin: 30px 150px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+.no{
+    background-color: #d9534f;
+    float: left;
+    border-color: #d43f3a;
+    
+}
+.no:hover{
+    background-color: #d43f3f
+}
+.yes{
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    float: right;
+}
+.yes:hover{
+    background-color: #337aa0;
+}
+.answer::after {
+	content: "";
+    display: block;
+    clear: both;
+}
+.other{
+    text-align: center;
+    clear: both;
+    font-size: 14px;
+    width: 85px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+.other:hover{
+    background-color: #ccc;
+}
+.footer {
+	width: 180px;
+    margin: 200px auto;
+}
+
+.main-question h1{
+    padding-top: 70px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.main-question textarea{
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin: 15px 0 0;
+    border-radius: 5px;
+}
+.main-question button{
+	display: block;
+    margin-top: 10px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #38b;
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-question button:hover{
+	background-color: #337aa2;
+}
