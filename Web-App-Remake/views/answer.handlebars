@@ -1,0 +1,15 @@
+<main class="main">
+        <div class="question">{{Question.content}}</div>
+        <div class="answer no">
+            <i class="far fa-thumbs-down"></i>
+            <a href="/answer/{{Question.id}}/no">Sai/Không/Trái</a>
+        </div>
+        <div class="answer yes">
+            <i class="far fa-thumbs-up"></i>
+            <a href="/answer/{{Question.id}}/yes">Đúng/Có/Phải</a>
+        </div>
+        <div class="footer">
+            <a class="other result" href="/question/{{Question.id}}">Kết quả vote</a>
+            <a class="other next" href="/">Câu hỏi khác</a>
+        </div>
+</main>
