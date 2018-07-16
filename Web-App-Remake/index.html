@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <title>QooApp</title>
+</head>
+<body>
+    <nav class="header">
+        <div><a href="#">Quyết.đê!</a></div>
+        <div ><a href="/ask">Hỏi nhanh</a></div>
+        <div style="background-color: #080808;"><a href="/">Đáp gọn</a></div>
+    </nav>
+    <section class="main-answer">
+        <div class="question">{{{Question}}}</div>
+        <div class="answer no">
+            <i class="far fa-thumbs-down"></i>
+            <span>Sai/Không/Trái</span>
+        </div>
+        <div class="answer yes">
+            <i class="far fa-thumbs-up"></i>
+            <span>Đúng/Có/Phải</span>
+        </div>
+        <div class="footer">
+            <span class="other">Kết quả vote</span>
+            <span class="other">Câu hỏi khác</span>
+        </div>
+    </section>    
+    <section class="main-question">
+        <div>
+            <h1>Hãy hỏi cộng đồng một câu hỏi đúng/sai hoặc có/không</h1>
+            <textarea></textarea>
+            <span>Còn 200/200 kí tự</span>
+            <button type="submit">Gửi</button>
+        </div>
+    </section>
+</body>
+</html>
