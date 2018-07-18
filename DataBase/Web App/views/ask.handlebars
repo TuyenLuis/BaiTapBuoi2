@@ -1,0 +1,32 @@
+<section class="main-question">
+        <div>
+            <h1>Hãy hỏi cộng đồng một câu hỏi đúng/sai hoặc có/không</h1>
+            <form action="/question/add" method="POST">
+                <textarea name="question" maxlength="200"></textarea>
+                <span>Còn <span id="character">200</span>/200 kí tự</span>
+                <button type="submit">Gửi</button>
+            </form>
+        </div>
+</section>
+
+<script>
+    var textArea = document.querySelector("textarea");
+    var maxLength = 200;
+    /*
+    textArea.addEventListener("keyup", function(){
+        document.querySelector("#character").innerText = maxLength - textArea.value.length;
+    })
+
+    textArea.addEventListener("keydown", function(){
+        document.querySelector("#character").innerText = maxLength - textArea.value.length;
+    })
+
+    */
+
+    textArea.addEventListener("input", function(){
+        document.querySelector("#character").innerText = maxLength - textArea.value.length;
+    })
+    
+
+
+</script>

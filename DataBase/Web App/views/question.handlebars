@@ -1,0 +1,79 @@
+<div class="question">
+    <h3>{{Question.content}}</h3>
+
+    <div class="total-vote">{{totalVote}} Vote</div>
+
+    
+    <span class="no-ans">No: {{Question.no}}</span>
+    <span class="yes-ans">Yes: {{Question.yes}}</span>
+
+    <a href="/" class="next-question"><button>Câu hỏi khác</button></a>
+
+
+</div>
+<style>
+    .question{
+        width: 1140px;
+        margin: 0 auto;
+    }
+    h3{
+        text-align: center;
+        margin: 70px 0;
+        font-size: 25px;
+        font-weight: bold;
+        color: #111;
+    }
+    .total-vote{
+        text-align: center;
+        font-size: 20px;
+        color: #111;
+    }
+    .next-question{
+        display: block;
+        margin: 50px auto;        
+    }
+    button{
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        border: none;
+        background-color: #6c6;
+        border-radius: 5px;
+        color: #fff;
+    }
+    button:hover{
+        
+        background-color: #5cb86f;
+    }
+    span{
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        display: inline-block;
+        margin: 20px 0;
+    }
+    .yes-ans{
+        background-color: #38b;
+    }
+    .no-ans{
+        background-color: #e55;
+    }
+
+</style>
+
+<script>
+    var yesAnswer = document.querySelector('.yes-ans');
+    var noAnswer = document.querySelector('.no-ans');
+    var yesAnswerWidth = {{Question.yes}}/{{totalVote}} *100;
+    var noAnswerWidth = {{Question.no}}/{{totalVote}} *100;
+    if(yesAnswerWidth === 0){
+        yesAnswer.style.display = 'none';
+    }
+    if(noAnswerWidth === 0){
+        noAnswer.style.display = 'none';
+    }
+    yesAnswer.style.width = (yesAnswerWidth - 1) + '%';
+    noAnswer.style.width = (noAnswerWidth)+ '%';
+
+</script>
