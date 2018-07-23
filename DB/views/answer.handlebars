@@ -1,0 +1,42 @@
+<main class="main">
+        <div class="question">{{Question.content}}</div>
+        <div class="answer no">
+            <i class="far fa-thumbs-down"></i>
+            <a href="/answer/{{Question.id}}/no" id="wrongAns">Sai/Không/Trái</a>
+        </div>
+        <div class="answer yes">
+            <i class="far fa-thumbs-up"></i>
+            <a href="/answer/{{Question.id}}/yes" id="rightAns">Đúng/Có/Phải</a>
+        </div>
+        <div class="footer">
+            <a class="other result" href="/question/{{Question.id}}">Kết quả vote</a>
+            <a class="other next">Câu hỏi khác</a>
+        </div>
+</main>
+
+<script>
+    $(".next").on('click', () => {
+        $.ajax({
+            url: "/api/otherquestion",
+            type: "GET",
+            success: (body) => {
+                if(body.success){
+                    //window.location.href = "/question/" + body.questionID;
+                    console.log(body.question);
+                    $(".question").text(body.question.content);
+                    $("#wrongAns").attr("href", "/answer/" + body.question._id + "/no");
+                    $("#rightAns").attr("href", "/answer/" + body.question._id + "/yes");
+                    $(".result").attr("href", "/question/" + body.question._id);
+                    
+                }
+                else{
+                    alert("Not Found");
+                }
+            },
+            error: (body) => {
+                console.log(body);
+                alert("Not Found");
+            }
+        });
+    })
+</script>
