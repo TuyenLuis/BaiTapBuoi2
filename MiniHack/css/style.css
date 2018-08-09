@@ -1,0 +1,74 @@
+
+.header h1{
+    font-size: 30px;
+    line-height: 35px;
+    border-bottom: 1px solid #eee;
+}
+
+#form{
+    font-size: 18px;
+    text-align: center;
+}
+#form input {
+
+    border: 1px solid #BF1363;
+    border-radius: 5px;
+    background-color: #FBFEF9;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+#form button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #BF1363;
+    color: #fff;
+    border-radius: 5px;
+}
+
+table tr{
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: left;
+}
+
+
+.add-round{
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #BF1363;
+    color: #fff;
+    border-radius: 5px;
+}
+table {
+    width:100%;
+}
+table, th, td {
+    border: none;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+   background-color: #fff;
+}
+#sum{
+    background-color: #BF1363;
+    color: #fff;
+}
+
+td>input{
+    width: 80px;
+    height: 40px;
+    border: 1px solid #BF1363;
+    border-radius: 5px;
+}
+
